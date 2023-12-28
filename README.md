@@ -19,3 +19,11 @@ Given that I am currently learning web development on my own I have decided to m
 Extention in a usable state!!
 As of now just displays the available people at a particular time slot
 Also does the above if the cursor is not on a time slot displaying an empty list
+
+## Usage Instructions
+
+Keyboard shortcut: `Ctrl + Shift + E`
+
+Go to a when2meet scheduling page and reload the page to ensure the extension is actually in effect (_might not work otherwise_).
+
+Bring your cursor on a time slot on the **right** table (i.e. the one labeled Group's Availability). Then hit the above keyboard shortcut and watch the magic happen.
