@@ -6,7 +6,14 @@
   "author": "Shadow5634",
 
   "permissions" : ["storage", "tabs", "scripting", "activeTab"],
-  "host_permissions" : ["https://www.when2meet.com/*"],
+  "host_permissions" : ["https://www.when2meet.com/?*"],
+
+  "content_scripts" : [
+    {
+      "matches" : ["https://www.when2meet.com/?*"],
+      "js" : ["content_script.js"]
+    }
+  ],
 
   "background" : 
   {
