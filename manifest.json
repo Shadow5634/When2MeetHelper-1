@@ -1,0 +1,32 @@
+{
+  "name": "When2Meet Helper 1",
+  "version": "1.0.0",
+  "description": "chrome extension that makes it easier to view available and unavailable people",
+  "manifest_version": 3,
+  "author": "Shadow5634",
+
+  "permissions" : ["storage", "tabs", "scripting"],
+  "host_permissions" : ["https://www.when2meet.com/*"],
+
+  "content_scripts" : [
+    {
+      "matches" : ["https://www.when2meet.com/*"],
+      "js" : ["content_script.js"]
+    }
+  ],
+
+  "background" : 
+  {
+    "service_worker" : "service_worker.js",
+    "type" : "module"
+  },
+
+  "commands" : 
+  {
+    "view_people" : 
+    {
+      "suggested_key" : {"default" : "Ctrl+Shift+E"},
+      "description" : "shows the available and unavailable people at a particular time slot"
+    }
+  }
+}
