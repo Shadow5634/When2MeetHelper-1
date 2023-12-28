@@ -16,5 +16,6 @@ Given that I am currently learning web development on my own I have decided to m
 
 ## Current features
 
-Just added functionality for communication between service worker and content script for when2meet pages.
-Extension is still not usable.
+Extention in a usable state!!
+As of now just displays the available people at a particular time slot
+Also does the above if the cursor is not on a time slot displaying an empty list
