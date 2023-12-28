@@ -16,9 +16,9 @@ Given that I am currently learning web development on my own I have decided to m
 
 ## Current features
 
-Extention in a usable state!!
-As of now just displays the available people at a particular time slot
-Also does the above if the cursor is not on a time slot displaying an empty list
+Extention in final state of first iteration!!
+Displays the date and list of available and unavailable people at time slot that corresponds to cursor's position
+Also does the above if the cursor is not on a time slot displaying empty fields
 
 ## Usage Instructions
 
@@ -26,4 +26,6 @@ Keyboard shortcut: `Ctrl + Shift + E`
 
 Go to a when2meet scheduling page and reload the page to ensure the extension is actually in effect (_might not work otherwise_).
 
-Bring your cursor on a time slot on the **right** table (i.e. the one labeled Group's Availability). Then hit the above keyboard shortcut and watch the magic happen.
+Bring your cursor on a time slot on the **right** table (i.e. the one labeled Group's Availability). Then hit the above keyboard shortcut and watch the magic happen!
+
+Note: The extension is not on the chrome web store yet. You shall have to download these files and upload them as unpacked extension in developer mode at the chrome extensions website
