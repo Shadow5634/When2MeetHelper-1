@@ -16,4 +16,5 @@ Given that I am currently learning web development on my own I have decided to m
 
 ## Current features
 
-As of now the extension does not do anything and thus is unusable. I have just started the development process and will regularly update this section as and when changes occur.
+Just added functionality for communication between service worker and content script for when2meet pages.
+Extension is still not usable.
