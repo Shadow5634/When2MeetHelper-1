@@ -21,28 +21,32 @@ function showAvailability()
 {
   let displayStr = ''
 
-  displayStr += 'AVAILBLE:\n' + getAvailablePeople() + '\n'
+  displayStr += 'DATE: ' + getDateTime() + '\n\n'
+  displayStr += 'AVAILBLE:\n' + getPeople('#Available') + '\n\n'
+  displayStr += 'UNAVAILABLE:\n' + getPeople('#Unavailable')
 
   alert(displayStr)
 }
 
 /**
- * 
- * @returns The list of available people as a comma separated list
+ * Returns the list of people's availabilty/unavailability at cursors time slot as a comma separated list
+ * Returns available list if id = #Available
+ * Returns unavailable list if id = #Unavailable
+ * @returns string
  */
-function getAvailablePeople()
+function getPeople(id)
 {
-  let divOfAvailable = document.querySelector('#Available')
-  if (divOfAvailable === null)
+  let divOfPeople = document.querySelector(id)
+  if (divOfPeople === null)
   {
     return ''
   }
   else
   {
-    let availableHTML = divOfAvailable.innerHTML
-    let availableNamesArray = availableHTML.split('<br>')
+    let peopleHTML = divOfPeople.innerHTML
+    let peopleNamesArray = peopleHTML.split('<br>')
 
-    let availableNamesStr = availableNamesArray.reduce
+    let peopleNamesStr = peopleNamesArray.reduce
     (
       function(acc, currName)
       {
@@ -59,6 +63,24 @@ function getAvailablePeople()
       , ''
     )
 
-    return availableNamesStr
+    return peopleNamesStr
+  }
+}
+
+/**
+ * Returns the date and time of the current time slot that the cursor is on
+ * @returns string
+ */
+function getDateTime()
+{
+  let divOfDate = document.querySelector('#AvailableDate');
+
+  if (divOfDate === null)
+  {
+    return '';
+  }
+  else
+  {
+    return divOfDate.textContent;
   }
 }
