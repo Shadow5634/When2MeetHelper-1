@@ -37,3 +37,5 @@ Note: Because chrome web store requires a registration fee I shall not be postin
 - Have a popup that lets the user edit the keyboard shortcut that triggers the extension. This is to prevent problems such as those on Edge
 
 - Try out the extension on different browsers to check compatibilty and issues.
+
+- Try finding a free way to publish this extension on one of the extension stores.
