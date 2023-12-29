@@ -1,11 +1,12 @@
 # When2MeetHelper-1
 
 # Table of Contents
-1) [Description](#description)
-2) [Motivation](#motivation)
-3) [Current Features](#current-features)
-4) [Usage Instructions](#usage-instructions)
-5) [Bug Tracker](#next-on-the-tracker)
+
+1. [Description](#1-description)
+2. [Motivation](#2-motivation)
+3. [Current Features](#3-current-features)
+4. [Usage Instructions](#4-usage-instructions)
+5. [Bug Tracker](#5-next-on-the-tracker)
 
 ## 1] Description
 
