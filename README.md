@@ -28,4 +28,12 @@ Go to a when2meet scheduling page and reload the page to ensure the extension is
 
 Bring your cursor on a time slot on the **right** table (i.e. the one labeled Group's Availability). Then hit the above keyboard shortcut and watch the magic happen!
 
-Note: The extension is not on the chrome web store yet. You shall have to download these files and upload them as unpacked extension in developer mode at the chrome extensions website
+Note: It appears that some browsers (e.g.: Microsoft Edge) do not pick up the keyboard shortcut from the manifest file and requires user to manually update this by going into keyboard shortcuts panel of extensions. Be sure to verify that a shortcut exists for this extension after installation.
+
+Note: Because chrome web store requires a registration fee I shall not be posting this on the chrome web store. In order to use the extension you will have to download these files and upload them as unpacked extension in developer mode at the chrome extensions website. Sorry for the inconvenience.
+
+## Next on the Tracker
+
+- Have a popup that lets the user edit the keyboard shortcut that triggers the extension. This is to prevent problems such as those on Edge
+
+- Try out the extension on different browsers to check compatibilty and issues.
