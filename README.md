@@ -1,12 +1,19 @@
 # When2MeetHelper-1
 
-## Description
+# Table of Contents
+1) [Description](#description)
+2) [Motivation](#motivation)
+3) [Current Features](#current-features)
+4) [Usage Instructions](#usage-instructions)
+5) [Bug Tracker](#next-on-the-tracker)
+
+## 1] Description
 
 This is an extension built for chrome that lets one view the available and unavailable people at a particular time slot in a when2meet link.
 
 In the first iteration (version 1.0.0) this information shall be displayed in an alert box on hitting a keyboard shortcut specific to this extension.
 
-## Motivation
+## 2] Motivation
 
 Being a  head undergraduate TA at my university I have had to use when2meet quite often in order to schedule meetings. 
 
@@ -14,13 +21,12 @@ However, one cannot view the available and unavailable people for a particular t
 
 Given that I am currently learning web development on my own I have decided to make a chrome extension that solves this issue. I plan to publish this on the chrome extension store as a free extension so that others can benefit as well.
 
-## Current features
+## 3] Current features
 
 Extention in final state of first iteration!!
-Displays the date and list of available and unavailable people at time slot that corresponds to cursor's position
-Also does the above if the cursor is not on a time slot displaying empty fields
+Displays the date and list of available and unavailable people at time slot that corresponds to cursor's position. Also does the above if the cursor is not on a time slot displaying empty fields
 
-## Usage Instructions
+## 4] Usage Instructions
 
 Keyboard shortcut: `Ctrl + Shift + E`
 
@@ -32,7 +38,7 @@ Note: It appears that some browsers (e.g.: Microsoft Edge) do not pick up the ke
 
 Note: Because chrome web store requires a registration fee I shall not be posting this on the chrome web store. In order to use the extension you will have to download these files and upload them as unpacked extension in developer mode at the chrome extensions website. Sorry for the inconvenience.
 
-## Next on the Tracker
+## 5] Next on the Tracker
 
 - Have a popup that lets the user edit the keyboard shortcut that triggers the extension. This is to prevent problems such as those on Edge
 
