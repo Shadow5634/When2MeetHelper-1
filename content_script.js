@@ -1,5 +1,13 @@
+// adds the showAvailabilityManager listener for the current when2meet scheduling page
 chrome.runtime.onMessage.addListener(showAvailabilityManager)
 
+/**
+ * * Function that manages showing the list of available and unavailable people on receiving prompt of view_people
+ * * Replies with UNEXPECTED MESSAGE!!! string if prompt is not the expected one 
+ * @param {*} request - the request message being sent
+ * @param {*} sender - the sender of the request
+ * @param {*} sendResponse - function callback used to reply to the request
+ */
 function showAvailabilityManager(request, sender, sendResponse)
 {
   if (request.message === 'view_people')
@@ -32,6 +40,7 @@ function showAvailability()
  * Returns the list of people's availabilty/unavailability at cursors time slot as a comma separated list
  * Returns available list if id = #Available
  * Returns unavailable list if id = #Unavailable
+ * @param {string} id - the type of people requested - #Available/#Unavailable 
  * @returns string
  */
 function getPeople(id)
@@ -46,6 +55,7 @@ function getPeople(id)
     let peopleHTML = divOfPeople.innerHTML
     let peopleNamesArray = peopleHTML.split('<br>')
 
+    // reduces the names of people array to a string
     let peopleNamesStr = peopleNamesArray.reduce
     (
       function(acc, currName)
