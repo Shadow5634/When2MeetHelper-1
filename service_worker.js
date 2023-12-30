@@ -1,5 +1,6 @@
-// Adds the displayAvailability listener when extension is installed/updated
-chrome.runtime.onInstalled.addListener(() => chrome.commands.onCommand.addListener(displayAvailability))
+// adds the listener every time the service worker gets active
+// needed to allow extension to be used at any time - even on starting chrome again
+chrome.commands.onCommand.addListener(displayAvailability)
 
 /**
  * * Displays the people available and unavailable if command matches the extension's shortcut key
@@ -23,4 +24,10 @@ async function displayAvailability(command)
   }
 }
 
-chrome.runtime.onStartup.addListener(() => chrome.commands.onCommand.addListener(displayAvailability));
+function old()
+{
+  // Adds the displayAvailability listener when extension is installed/updated
+  chrome.runtime.onInstalled.addListener(() => chrome.commands.onCommand.addListener(displayAvailability))
+  // Adds the displayAvailability listener when chrome is started
+  chrome.runtime.onStartup.addListener(() => chrome.commands.onCommand.addListener(displayAvailability));
+}

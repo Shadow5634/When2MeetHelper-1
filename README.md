@@ -7,6 +7,7 @@
 3. [Current Features](#3-current-features)
 4. [Usage Instructions](#4-usage-instructions)
 5. [Bug Tracker](#5-next-on-the-tracker)
+6. [Wrapped Up Bugs](#6-wrapped-up-bugs)
 
 ## 1] Description
 
@@ -43,8 +44,6 @@ Note: Because chrome web store requires a registration fee I shall not be postin
 
 The following items are arranged in decreasing order of importance:
 
-- Extension becomes inactive after 30s of no usage, making the extension impossible to use without a manual reload.
-
 - List of people on website stays at the last hovered box. Thus, recalling the extension shows the info at this last time slot instead of empty fields. This needs to be fixed.
 
 - Have a popup that lets the user edit the keyboard shortcut that triggers the extension. This is to prevent problems such as those on Edge
@@ -52,3 +51,9 @@ The following items are arranged in decreasing order of importance:
 - Try out the extension on different browsers to check compatibilty and issues.
 
 - Try finding a free way to publish this extension on one of the extension stores.
+
+## 6] Wrapped Up Bugs
+
+1. Extension becomes inactive after 30s of no usage, making the extension impossible to use without a manual reload.
+
+    - Countered by adding a listener each time the service worker is run and not on installation/chrome startup
