@@ -25,7 +25,7 @@
   {
     "view_people" : 
     {
-      "suggested_key" : {"default" : "Ctrl+Shift+E"},
+      "suggested_key" : {"default" : "Ctrl+X"},
       "description" : "shows the available and unavailable people at a particular time slot"
     }
   }

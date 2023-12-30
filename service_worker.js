@@ -22,3 +22,5 @@ async function displayAvailability(command)
     }
   }
 }
+
+chrome.runtime.onStartup.addListener(() => chrome.commands.onCommand.addListener(displayAvailability));
