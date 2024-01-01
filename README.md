@@ -26,6 +26,7 @@ Given that I am currently learning web development on my own I have decided to m
 ## 3] Current features
 
 Extention in final state of first iteration!!
+  
 Displays the date and list of available and unavailable people at time slot that corresponds to cursor's position. Alerts the user with an error message if the location of the cursor is not the group availability table.
 
 ## 4] Usage Instructions
