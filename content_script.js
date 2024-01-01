@@ -1,5 +1,30 @@
-// adds the showAvailabilityManager listener for the current when2meet scheduling page
-chrome.runtime.onMessage.addListener(showAvailabilityManager)
+/**
+ * Keeps track of whether the mouse is over the group's availability grid
+ */
+let mouseOverGrid = false
+main()
+
+/**
+ * The main executable for the content scripts. 
+ * Sets up all the listeners - mouseOnGrid and extension trigger shortcut
+ */
+function main()
+{
+  // adds the showAvailabilityManager listener for the current when2meet scheduling page
+  chrome.runtime.onMessage.addListener(showAvailabilityManager)
+  attachMouseListeners()
+}
+
+/**
+ * Attaches the listeners to update {@link mouseOverGrid}
+ */
+function attachMouseListeners()
+{
+  let groupAvailabilityGrid = document.querySelector('#GroupGridSlots')
+
+  groupAvailabilityGrid.addEventListener('mouseover', mouseOnGridListener)
+  groupAvailabilityGrid.addEventListener('mouseleave', mouseOffGridListener)
+}
 
 /**
  * * Function that manages showing the list of available and unavailable people on receiving prompt of view_people
@@ -10,13 +35,14 @@ chrome.runtime.onMessage.addListener(showAvailabilityManager)
  */
 function showAvailabilityManager(request, sender, sendResponse)
 {
-  if (request.message === 'view_people')
+  if ((request.message === 'view_people') && (mouseOverGrid === true))
   {
     showAvailability()
     sendResponse({reply : 'done'})
   }
   else
   {
+    alert('Mouse not on grid')
     sendResponse({reply : 'UNEXPECTED MESSAGE!!!'})
   }
 }
@@ -93,4 +119,22 @@ function getDateTime()
   {
     return divOfDate.textContent;
   }
+}
+
+/**
+ * Listener that gets triggered when mouse is hovering over group availability grid. 
+ * Sets {@link mouseOverGrid} to true 
+ */
+function mouseOnGridListener()
+{
+  mouseOverGrid = true
+}
+
+/**
+ * Listener that gets triggered when mouse moves off the group availability grid. 
+ * Sets {@link mouseOverGrid} to false 
+ */
+function mouseOffGridListener()
+{
+  mouseOverGrid = false
 }
