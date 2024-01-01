@@ -19,14 +19,14 @@ In the first iteration (version 1.0.0) this information shall be displayed in an
 
 Being a  head undergraduate TA at my university I have had to use when2meet quite often in order to schedule meetings. 
 
-However, one cannot view the available and unavailable people for a particular time slot if the time ranges are very large since this information is limited to the top of the screen. In order to overcome this I would have to zoom out considerably which is not an efficient solution. 
+However, if the time ranges for a day are very large it gets tough to view the available and unavailable people for those time slots that are towards the bottom of the time range. The availability information is limited to the top of the screen while the time slots table spans almost the whole height of the screen with scrolling required for the later time slots. In order to overcome this I would have to zoom out considerably which is not an efficient solution. 
 
 Given that I am currently learning web development on my own I have decided to make a chrome extension that solves this issue. I plan to publish this on the chrome extension store as a free extension so that others can benefit as well.
 
 ## 3] Current features
 
 Extention in final state of first iteration!!
-Displays the date and list of available and unavailable people at time slot that corresponds to cursor's position. Also does the above if the cursor is not on a time slot displaying empty fields
+Displays the date and list of available and unavailable people at time slot that corresponds to cursor's position. Alerts the user with an error message if the location of the cursor is not the group availability table.
 
 ## 4] Usage Instructions
 
