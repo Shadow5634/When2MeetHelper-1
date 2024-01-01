@@ -44,9 +44,7 @@ Note: Because chrome web store requires a registration fee I shall not be postin
 
 The following items are arranged in decreasing order of importance:
 
-- List of people on website stays at the last hovered box. Thus, recalling the extension shows the info at this last time slot instead of empty fields. This needs to be fixed.
-
-- Have a popup that lets the user edit the keyboard shortcut that triggers the extension. This is to prevent problems such as those on Edge
+- Have a popup that lets the user edit the keyboard shortcut that triggers the extension. This is to prevent problems such as the browser not picking up the shorcut.
 
 - Try out the extension on different browsers to check compatibilty and issues.
 
@@ -57,3 +55,7 @@ The following items are arranged in decreasing order of importance:
 1. Extension becomes inactive after 30s of no usage, making the extension impossible to use without a manual reload.
 
     - Countered by adding a listener each time the service worker is run and not on installation/chrome startup
+
+2. List of people on website stays at the last hovered box. Thus, recalling the extension shows the info at this last time slot instead of empty fields. This needs to be fixed.
+
+    - Countered by having listeners that get triggered when cursor is on the group availability table and moves off it. Thus calling the extension triggering shortcut only displays info if cursor in on this table - maintained through a global boolean checker variable
